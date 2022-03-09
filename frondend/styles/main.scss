@@ -335,10 +335,62 @@ header {
                 font-size: 18px;
                 color: #b1b1b1;
             }
+
+            .text-blue {
+                color: #071C4D;
+            }
+
+            .text-orange {
+                color: #FF9E53;
+            }
+
+
         }
 
+        .payment-instructions {
+            font-weight: 300px;
+            font-size: 14px;
+            color: #b1b1b1;
+        }
+
+        .bank {
+            .bank-item {
+                h3 {
+                    font-size: 18px;
+                    color: #071C4D;
+                    margin-bottom: 0;
+
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                .description {
+                    margin-left: 10px;
+                    overflow: hidden;
+                    float: left;
+
+                    p {
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: #071C4D;
+
+                    }
+                }
+            }
+
+            .bank-image {
+                width: 45px;
+                height: 45px;
+                float: left;
+            }
+        }
+
+
+
         h3 {
-            font-weight: 600;
+            font-weight: 300;
             font-size: 14px;
             color: #071C4D;
         }
@@ -370,8 +422,6 @@ header {
                 color: #fff;
             }
         }
-
-
 
         .features {
             margin-top: 20px;
@@ -449,4 +499,42 @@ header {
             background-color: #ffa764;
         }
     }
+
+    .btn-cancel {
+        color: #BFBFBF;
+        font-weight: 300;
+        font-size: 20px;
+    }
+}
+
+.section-success {
+    height: 90vh;
+
+    h1 {
+        font-weight: 600;
+        font-size: 26px;
+        color: #071C4D;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 18px;
+        color: #b1b1b1;
+    }
+
+    .btn-home-page {
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        background-color: #071C4D;
+        color: #fff;
+        
+        &:hover {
+            background-color: #1b3b86;
+            color: #fff;
+        }
+}
+
 }
