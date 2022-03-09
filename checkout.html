@@ -8,6 +8,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="frondend/libraries/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="frondend/libraries/xzoom/xzoom.css">
+  <link rel="stylesheet" href="frondend/libraries/gijgo/css/gijgo.min.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -64,7 +65,7 @@
             <div class="card card-details">
               <h1>Who is Going?</h1>
               <p>Trip to Ubud, Bali, Indonesia</p>
-         
+
               <div class="attendee">
                 <table class="table table-responsive-sm text-center">
                   <thead>
@@ -96,9 +97,9 @@
                       <td>
                         <img src="frondend/images/avatar-1.png" height="60" alt="">
                       </td>
-                      <td class="align-middle">Angga Risky</td>
-                      <td class="align-middle">CN</td>
-                      <td class="align-middle">N/A</td>
+                      <td class="align-middle">Rizki Darmawan</td>
+                      <td class="align-middle">SG</td>
+                      <td class="align-middle">30 Days</td>
                       <td class="align-middle">Active</td>
                       <td class="align-middle">
                         <a href="">
@@ -109,6 +110,37 @@
                   </tbody>
                 </table>
               </div>
+              <div class="member mt-3">
+                <h2>Add Member</h2>
+                <form action="" class="form-inline">
+                  <label for="inputUsername" class="sr-only">Name</label>
+                  <input type="text" class="form-control mb-2 mr-sm-2" id="inputUsername" placeholder="Username"
+                    name="inputUsername" />
+                  <label for="inputVisa" class="sr-only">Visa</label>
+                  <select name="inputVisa" id="inputVisa" class="custom-select mb-2 mr-sm-2">
+                    <option value="VISA" selected>VISA</option>
+                    <option value="30 Days">30 Days</option>
+                    <option value="N/A">N/A</option>
+                  </select>
+
+                  <label for="doePassport" class="sr-only">DOE Passport</label>
+                  <div class="input-group mb-2 mr-sm-2">
+                    <input type="text" class="form-control datepicker" id="doePassport" placeholder="DOE Passport">
+                  </div>
+
+                  <button type="submit" class="btn btn-add-now mb-2 px-4">
+                    Add Now
+                  </button>
+                </form>
+                <h3 class="mt-2 mb-0">
+                  Note
+                </h3>
+                <p class="disclaimer mb-9">
+                  You are only able to invite member that has registered in Nomads.
+                </p>
+              </div>
+
+
             </div>
           </div>
           <div class="col-lg-4 mt-3 mt-lg-0 mt-md-3">
@@ -123,7 +155,7 @@
               </div>
               <hr>
               <h2>Trip Information</h2>
-              <table class="trip-information">
+              <table class="trip-informations">
                 <tr>
                   <th width="50%">Date of Departure</th>
                   <td width="50%" class="text-right">
@@ -219,14 +251,24 @@
   <script src="frondend/libraries/bootstrap/js/bootstrap.js"></script>
   <script src="frondend/libraries/retina/retina.min.js"></script>
   <script src="frondend/libraries/xzoom/xzoom.min.js"></script>
+  <script src="frondend/libraries/gijgo/js/gijgo.min.js"></script>
   <script>
     $(document).ready(function () {
       $('.xzoom, .xzoom-gallery').xzoom({
         zoomWidth: 500,
-        title:false,
-        tint:'#fff',
-        xoffset:15,
+        title: false,
+        tint: '#fff',
+        xoffset: 15,
       });
+
+      $('.datepicker').datepicker({
+        uiLibrary: 'bootstrap4',
+        icons: {
+          rightIcon: '<img src="frondend/images/ic_doe.png">'
+        }
+
+      })
+
     });
   </script>
 </body>
